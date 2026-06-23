@@ -1,0 +1,104 @@
+.container {
+  padding: 0;
+}
+
+.hero {
+  padding: 8rem 5% 4rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--background) 0%, var(--secondary) 100%);
+}
+
+.title { font-size: 4rem; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+.desc { color: var(--muted-foreground); max-width: 800px; margin: 0 auto; font-size: 1.25rem; line-height: 1.8; }
+
+.section { padding: 6rem 5%; }
+.sectionBg { background: var(--secondary); }
+.sectionTitle { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
+.sectionDesc { text-align: center; color: var(--muted-foreground); max-width: 700px; margin: 0 auto 4rem; font-size: 1.1rem; line-height: 1.8;}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefitCard {
+  background: var(--background);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.benefitCard:hover { transform: translateY(-5px); border-color: var(--primary); }
+.benefitIcon { color: var(--primary); margin-bottom: 1.5rem; display: flex; justify-content: center; }
+.benefitCard h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.benefitCard p { color: var(--muted-foreground); line-height: 1.6; }
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+.timelineCard {
+  background: var(--background);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.stepNum { font-size: 3rem; font-weight: 800; color: var(--primary); opacity: 0.2; margin-bottom: 1rem; }
+.timelineCard h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.timelineCard p { font-size: 0.95rem; color: var(--muted-foreground); line-height: 1.5; }
+
+.jobGrid { display: flex; flex-direction: column; gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+.jobCard {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--background); border: 1px solid var(--border);
+  padding: 2rem; border-radius: 16px; transition: all 0.2s ease;
+}
+.jobCard:hover { border-color: var(--primary); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); }
+
+@media (max-width: 768px) {
+  .jobCard { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+}
+
+.jobInfo h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.jobMeta { display: flex; gap: 1.5rem; color: var(--muted-foreground); font-size: 1rem; flex-wrap: wrap; }
+.jobMeta span { display: flex; align-items: center; gap: 0.5rem; }
+
+.applyBtn {
+  background: var(--primary); color: var(--primary-foreground);
+  border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 700; cursor: pointer; transition: background 0.2s ease;
+}
+.applyBtn:hover { background: #1d4ed8; }
+
+/* Application Form */
+.formContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--background);
+  padding: 4rem;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+}
+
+.formGroup { margin-bottom: 2rem; }
+.formGroup label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+.formInput, .formSelect, .formTextarea {
+  width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--background); color: var(--foreground); font-family: inherit; font-size: 1rem;
+}
+.formTextarea { min-height: 150px; resize: vertical; }
+
+.fileUpload {
+  border: 2px dashed var(--border); padding: 3rem; text-align: center; border-radius: 8px;
+  cursor: pointer; transition: border-color 0.2s ease;
+}
+.fileUpload:hover { border-color: var(--primary); }
+
+.submitBtn {
+  width: 100%; background: var(--primary); color: var(--primary-foreground);
+  border: none; padding: 1.25rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem; cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.hero {
+  padding: 8rem 5% 4rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.title { font-size: 4rem; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+.subtitle { font-size: 1.25rem; color: var(--muted-foreground); line-height: 1.8; }
+
+.section { padding: 6rem 5%; }
+.sectionBg { background: var(--secondary); }
+.sectionTitle { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
+.sectionDesc { text-align: center; color: var(--muted-foreground); max-width: 800px; margin: 0 auto 4rem; font-size: 1.1rem; line-height: 1.8;}
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card { background: var(--background); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border); }
+.cardIcon { color: var(--primary); margin-bottom: 1.5rem; }
+.cardTitle { font-size: 1.5rem; margin-bottom: 1rem; }
+.cardDesc { color: var(--muted-foreground); line-height: 1.6; }
+
+.processGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; counter-reset: process-counter; }
+.processCard { background: var(--background); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border); position: relative; }
+.processCard::before {
+  counter-increment: process-counter;
+  content: counter(process-counter);
+  position: absolute; top: -20px; left: 20px;
+  background: var(--primary); color: var(--primary-foreground);
+  width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; font-weight: 800; font-size: 1.25rem;
+}
+
+.faqContainer { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+.faqItem { background: var(--background); border: 1px solid var(--border); padding: 2rem; border-radius: 12px; }
+.faqQ { font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem; }
+.faqA { color: var(--muted-foreground); line-height: 1.6; }
+
+.ctaBox { background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%); color: white; padding: 6rem 5%; text-align: center; border-radius: 24px; margin: 4rem 5%; }
+.ctaBtn { background: white; color: var(--foreground); border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem; margin-top: 2rem; cursor: pointer; }

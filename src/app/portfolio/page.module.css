@@ -1,0 +1,41 @@
+.container { padding: 8rem 5%; max-width: 1400px; margin: 0 auto; }
+.header { text-align: center; margin-bottom: 6rem; }
+.title { font-size: clamp(3rem, 5vw, 4rem); margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+.desc { color: var(--muted-foreground); max-width: 800px; margin: 0 auto; font-size: 1.25rem; line-height: 1.8; }
+
+.caseGrid { display: flex; flex-direction: column; gap: 6rem; }
+.caseCard {
+  background: var(--background); border: 1px solid var(--border);
+  border-radius: 24px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .caseCard { grid-template-columns: 1fr; }
+}
+
+.caseImage {
+  background: var(--secondary); display: flex; align-items: center; justify-content: center;
+  padding: 4rem; position: relative; overflow: hidden; min-height: 400px;
+}
+.caseImageInner {
+  width: 100%; height: 100%; border-radius: 16px; border: 1px solid var(--border);
+  background: var(--background); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1); font-weight: 700; color: var(--muted-foreground); text-align: center; padding: 2rem;
+}
+
+.caseContent { padding: 4rem; }
+.clientName { color: var(--primary); font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+.caseTitle { font-size: 2.5rem; margin-bottom: 2rem; line-height: 1.2; }
+
+.metricsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.metric { }
+.metricValue { font-size: 2.5rem; font-weight: 800; color: var(--primary); font-family: var(--font-manrope); }
+.metricLabel { color: var(--muted-foreground); font-size: 0.95rem; }
+
+.caseSection { margin-bottom: 2rem; }
+.caseSection h4 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+.caseSection p { color: var(--muted-foreground); line-height: 1.6; }
+
+.techStack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.techTag { background: var(--secondary); color: var(--foreground); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; }

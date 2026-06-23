@@ -1,0 +1,59 @@
+.container {
+  padding: 4rem 5%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  color: var(--muted-foreground);
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.category {
+  margin-bottom: 5rem;
+}
+
+.categoryTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.techItem {
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--foreground);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.techItem:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}

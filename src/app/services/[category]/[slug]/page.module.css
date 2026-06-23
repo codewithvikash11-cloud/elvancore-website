@@ -1,0 +1,179 @@
+.hero {
+  padding: 10rem 5% 6rem;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.categoryBadge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(37, 99, 255, 0.1);
+  color: var(--primary);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.overview {
+  font-size: 1.35rem;
+  color: var(--muted-foreground);
+  max-width: 800px;
+  line-height: 1.8;
+}
+
+/* Floating Elements */
+.glowBubble {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(37,99,255,0.15) 0%, rgba(0,0,0,0) 70%);
+  top: -200px;
+  right: -200px;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 1;
+}
+
+.section {
+  padding: 8rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .grid2 { grid-template-columns: 1fr; }
+}
+
+.featureList {
+  list-style: none;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.featureItem:hover {
+  transform: translateX(10px);
+  border-color: var(--primary);
+}
+
+.featureIcon {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.featureText {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Tech Stack */
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.techTag {
+  padding: 1rem 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-space-grotesk);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* FAQ */
+.faqItem {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.faqQ {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.faqA {
+  color: var(--muted-foreground);
+  line-height: 1.7;
+}
+
+.ctaSection {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  padding: 8rem 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaTitle {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.ctaBtn {
+  background: #fff;
+  color: var(--primary);
+  border: none;
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.ctaBtn:hover {
+  transform: scale(1.05);
+}
